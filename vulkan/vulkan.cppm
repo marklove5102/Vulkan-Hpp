@@ -1,5 +1,4 @@
 // Copyright 2015-2026 The Khronos Group Inc.
-//
 // SPDX-License-Identifier: Apache-2.0 OR MIT
 //
 
@@ -27,7 +26,7 @@ export module vulkan;
 
 export import std;
 
-VULKAN_HPP_STATIC_ASSERT( VK_HEADER_VERSION == 349, "Wrong VK_HEADER_VERSION!" );
+VULKAN_HPP_STATIC_ASSERT( VK_HEADER_VERSION == 357, "Wrong VK_HEADER_VERSION!" );
 
 #if defined( _MSC_VER )
 #  pragma warning( push )
@@ -602,6 +601,20 @@ export {
   using ::PFN_vkGetMemoryAndroidHardwareBufferANDROID;
 #endif /*VK_USE_PLATFORM_ANDROID_KHR*/
 
+  //=== VK_AMD_gpa_interface ===
+  using ::PFN_vkCmdBeginGpaSampleAMD;
+  using ::PFN_vkCmdBeginGpaSessionAMD;
+  using ::PFN_vkCmdCopyGpaSessionResultsAMD;
+  using ::PFN_vkCmdEndGpaSampleAMD;
+  using ::PFN_vkCmdEndGpaSessionAMD;
+  using ::PFN_vkCreateGpaSessionAMD;
+  using ::PFN_vkDestroyGpaSessionAMD;
+  using ::PFN_vkGetGpaDeviceClockInfoAMD;
+  using ::PFN_vkGetGpaSessionResultsAMD;
+  using ::PFN_vkGetGpaSessionStatusAMD;
+  using ::PFN_vkResetGpaSessionAMD;
+  using ::PFN_vkSetGpaDeviceClockModeAMD;
+
 #if defined( VK_ENABLE_BETA_EXTENSIONS )
   //=== VK_AMDX_shader_enqueue ===
   using ::PFN_vkCmdDispatchGraphAMDX;
@@ -892,6 +905,15 @@ export {
   using ::PFN_vkCmdBeginPerTileExecutionQCOM;
   using ::PFN_vkCmdDispatchTileQCOM;
   using ::PFN_vkCmdEndPerTileExecutionQCOM;
+
+  //=== VK_NV_low_latency ===
+  using ::PFN_vkGetLatencyTimingsLegacyNV;
+  using ::PFN_vkGetSleepStatusLegacyNV;
+  using ::PFN_vkLatencySleepLegacyNV;
+  using ::PFN_vkQueueNotifyOutOfBandLegacyNV;
+  using ::PFN_vkSetLatencyMarkerLegacyNV;
+  using ::PFN_vkSetLatencySleepModeLegacyNV;
+  using ::PFN_vkShutdownLatencyDeviceLegacyNV;
 
 #if defined( VK_USE_PLATFORM_METAL_EXT )
   //=== VK_EXT_metal_objects ===
